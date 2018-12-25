@@ -28,17 +28,19 @@
 			bitmap.y=100;
 			bitmap.rotate=60;
 			bitmap.alpha = 0.4
-			var lay1 = new LSprite();
-			addChild(lay1)
-			lay1.rotate=0;
-			lay1.addChild(bitmap)
+
 			var G = new LGraphics();
 			addChild(G)
 			G.drawRect(1,'#ff0000',[5,5,100,100],true,'#cccccc') 
 			G.drawArc(1,'#ff0000',[180,60,50,0,360*Math.PI/180],true,'#cccccc')
 			// 每个LSprite也包含了graphics
+			var lay1 = new LSprite();
+			lay1.useCursor = "pointer";
+			addChild(lay1)
+			lay1.rotate=0;
 			lay1.graphics.beginBitmapFill(bitmapDa);
 			lay1.graphics.drawRect(1,'#ff0000',[15,105,150,100],true,'#cccccc') 
+			lay1.addChild(bitmap)
 		}
 	</script>
 </body>
